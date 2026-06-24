@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .hero {
+            background-image: url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .section-fade {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800 overflow-x-hidden bg-[#f8f1e9]">
+
+<!-- HERO -->
+<section class="hero min-h-screen flex items-center text-black">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-semibold leading-tight mb-6 section-fade" id="hero-title">
+            YOUR COMPANY NAME
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto mb-12 section-fade" id="hero-subtitle">  <!-- Increased from mb-10 to mb-12 -->
+            Clear, concise value proposition. One or two lines that communicate what you do best.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-4 section-fade" id="hero-buttons">  <!-- Added mt-4 -->
+            <a href="#contact"
+               class="bg-blue-700 text-white hover:bg-blue-600 px-10 py-5 rounded-2xl font-semibold text-lg transition-all">
+                Book Now
+            </a>
+        </div>
+    </div>
+</section>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-4xl text-white/70"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="section-fade">
+                    <h2 class="text-4xl font-semibold mb-8">About Us</h2>
+                    <div class="space-y-6 text-lg text-gray-600">
+                        <p>We are a team of passionate professionals dedicated to delivering exceptional results through creativity, strategy, and precision.</p>
+                        <p>With years of experience and a client-first approach, we turn visions into reality while maintaining the highest standards of quality and integrity.</p>
+                    </div>
+                </div>
+                <div class="section-fade">
+                    <img src="https://picsum.photos/id/201/800/600" 
+                         alt="About Us" 
+                         class="rounded-3xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-4xl font-semibold mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-md mx-auto">Delivering excellence with precision and care.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl border border-gray-100 card-hover section-fade">
+                    <h3 class="text-2xl font-semibold mb-4">Service One</h3>
+                    <p class="text-gray-600">Professional description of this service. Highlight the key benefits and what makes it special.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl border border-gray-100 card-hover section-fade">
+                    <h3 class="text-2xl font-semibold mb-4">Service Two</h3>
+                    <p class="text-gray-600">Professional description of this service. Highlight the key benefits and what makes it special.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl border border-gray-100 card-hover section-fade">
+                    <h3 class="text-2xl font-semibold mb-4">Service Three</h3>
+                    <p class="text-gray-600">Professional description of this service. Highlight the key benefits and what makes it special.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-4xl font-semibold mb-4">Selected Work</h2>
+                <p class="text-gray-600">Projects delivered with dedication and quality.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="group section-fade">
+                    <div class="overflow-hidden rounded-3xl mb-6">
+                        <img src="https://picsum.photos/id/237/800/520" 
+                             class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <h4 class="font-semibold text-xl mb-1">Project Name One</h4>
+                    <p class="text-gray-500">Client • Industry</p>
+                </div>
+                
+                <div class="group section-fade">
+                    <div class="overflow-hidden rounded-3xl mb-6">
+                        <img src="https://picsum.photos/id/180/800/520" 
+                             class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <h4 class="font-semibold text-xl mb-1">Project Name Two</h4>
+                    <p class="text-gray-500">Client • Industry</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20">
+                <div class="section-fade">
+                    <h2 class="text-4xl font-semibold mb-8">Let's Work Together</h2>
+                    <p class="text-gray-600 text-lg mb-10">
+                        Have a project in mind? We're ready to discuss how we can help.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-5">
+                            <i class="fa-solid fa-envelope text-3xl text-blue-700 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-lg">Email</p>
+                                <a href="mailto:hello@yourcompany.com" class="text-blue-700 hover:underline text-lg">hello@yourcompany.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5">
+                            <i class="fa-solid fa-phone text-3xl text-blue-700 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-lg">Phone</p>
+                                <a href="tel:+1234567890" class="text-blue-700 hover:underline text-lg">+1 (234) 567-8900</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formsubmit.co/tritongouvea9@gmail.com" method="POST">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">First Name</label>
+                            <input type="text" required
+                                   class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-700 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Last Name</label>
+                            <input type="text" required
+                                   class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-700 transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email Address</label>
+                        <input type="email" required
+                               class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-700 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Message</label>
+                        <textarea rows="7" required
+                                  class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-blue-700 transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-5 rounded-2xl text-lg transition-all">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center items-center gap-3 mb-6">
+                <div class="w-10 h-10 bg-blue-700 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">L</div>
+                <span class="text-2xl font-semibold text-white">Your Company Name</span>
+            </div>
+            <p>&copy; 2026 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.section-fade');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            elements.forEach(el => observer.observe(el));
+        }
+
+        // Initialize
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById('hero-title').classList.add('visible');
+                document.getElementById('hero-subtitle').classList.add('visible');
+                document.getElementById('hero-buttons').classList.add('visible');
+            }, 300);
+
+            handleScrollAnimations();
+        };
+    </script>
+</body>
+</html>
